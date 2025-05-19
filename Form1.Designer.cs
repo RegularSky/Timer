@@ -43,6 +43,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.timerClcok = new System.Windows.Forms.Timer(this.components);
             this.timerAlert = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -55,13 +56,14 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(562, 256);
+            this.tabControl1.Size = new System.Drawing.Size(761, 404);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Turquoise;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.cmbMin);
             this.tabPage1.Controls.Add(this.cmbHour);
             this.tabPage1.Controls.Add(this.btnCancelAlert);
@@ -73,29 +75,31 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(554, 227);
+            this.tabPage1.Size = new System.Drawing.Size(753, 375);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "時鐘";
             // 
             // cmbMin
             // 
+            this.cmbMin.Font = new System.Drawing.Font("新細明體", 20F);
             this.cmbMin.FormattingEnabled = true;
-            this.cmbMin.Location = new System.Drawing.Point(146, 179);
+            this.cmbMin.Location = new System.Drawing.Point(190, 258);
             this.cmbMin.Name = "cmbMin";
-            this.cmbMin.Size = new System.Drawing.Size(104, 26);
+            this.cmbMin.Size = new System.Drawing.Size(104, 41);
             this.cmbMin.TabIndex = 6;
             // 
             // cmbHour
             // 
+            this.cmbHour.Font = new System.Drawing.Font("新細明體", 20F);
             this.cmbHour.FormattingEnabled = true;
-            this.cmbHour.Location = new System.Drawing.Point(25, 178);
+            this.cmbHour.Location = new System.Drawing.Point(25, 258);
             this.cmbHour.Name = "cmbHour";
-            this.cmbHour.Size = new System.Drawing.Size(104, 26);
+            this.cmbHour.Size = new System.Drawing.Size(104, 41);
             this.cmbHour.TabIndex = 5;
             // 
             // btnCancelAlert
             // 
-            this.btnCancelAlert.Location = new System.Drawing.Point(420, 167);
+            this.btnCancelAlert.Location = new System.Drawing.Point(588, 239);
             this.btnCancelAlert.Name = "btnCancelAlert";
             this.btnCancelAlert.Size = new System.Drawing.Size(131, 49);
             this.btnCancelAlert.TabIndex = 4;
@@ -104,7 +108,7 @@
             // 
             // btnSetAlert
             // 
-            this.btnSetAlert.Location = new System.Drawing.Point(273, 167);
+            this.btnSetAlert.Location = new System.Drawing.Point(416, 239);
             this.btnSetAlert.Name = "btnSetAlert";
             this.btnSetAlert.Size = new System.Drawing.Size(131, 49);
             this.btnSetAlert.TabIndex = 3;
@@ -114,27 +118,30 @@
             // txtWeekDay
             // 
             this.txtWeekDay.Enabled = false;
-            this.txtWeekDay.Location = new System.Drawing.Point(341, 85);
+            this.txtWeekDay.Font = new System.Drawing.Font("新細明體", 30F);
+            this.txtWeekDay.Location = new System.Drawing.Point(469, 166);
             this.txtWeekDay.Name = "txtWeekDay";
-            this.txtWeekDay.Size = new System.Drawing.Size(207, 29);
+            this.txtWeekDay.Size = new System.Drawing.Size(250, 67);
             this.txtWeekDay.TabIndex = 2;
             this.txtWeekDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDate
             // 
             this.txtDate.Enabled = false;
-            this.txtDate.Location = new System.Drawing.Point(29, 85);
+            this.txtDate.Font = new System.Drawing.Font("新細明體", 30F);
+            this.txtDate.Location = new System.Drawing.Point(25, 166);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(221, 29);
+            this.txtDate.Size = new System.Drawing.Size(438, 67);
             this.txtDate.TabIndex = 1;
             this.txtDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTime
             // 
             this.txtTime.Enabled = false;
-            this.txtTime.Location = new System.Drawing.Point(156, 25);
+            this.txtTime.Font = new System.Drawing.Font("新細明體", 52F);
+            this.txtTime.Location = new System.Drawing.Point(25, 31);
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(260, 29);
+            this.txtTime.Size = new System.Drawing.Size(694, 111);
             this.txtTime.TabIndex = 0;
             this.txtTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -169,6 +176,16 @@
             // 
             this.timerAlert.Tick += new System.EventHandler(this.timerAlert_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("新細明體", 20F);
+            this.label1.Location = new System.Drawing.Point(135, 265);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 34);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "：";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -200,6 +217,7 @@
         private System.Windows.Forms.TextBox txtDate;
         private System.Windows.Forms.Timer timerClcok;
         private System.Windows.Forms.Timer timerAlert;
+        private System.Windows.Forms.Label label1;
     }
 }
 
