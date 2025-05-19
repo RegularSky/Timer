@@ -17,6 +17,8 @@ namespace Timer
             InitializeComponent();
 
             comboboxInitialzation();
+
+            timerClcok.Start();       // 啟動時鐘
         }
 
         List<string> hours = new List<string>();            // 小時清單
@@ -35,7 +37,9 @@ namespace Timer
         }
         private void timerClcok_Tick(object sender, EventArgs e)
         {
-
+            txtTime.Text = DateTime.Now.ToString("HH:mm:ss");    // 顯示時間
+            txtDate.Text = DateTime.Now.ToString("yyyy-MM-dd");  // 顯示日期
+            txtWeekDay.Text = DateTime.Now.ToString("dddd");     // 顯示星期幾
         }
 
         private void timerAlert_Tick(object sender, EventArgs e)
